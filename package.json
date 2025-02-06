@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "start":"npm run dev",
+    "start": "npm run dev",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "npx eslint src",
@@ -34,7 +34,7 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3",
-    "vite": "^2.9.9",
+    "vite": "^6.1.0",
     "vite-plugin-svgr": "^2.2.1",
     "vite-tsconfig-paths": "^3.5.0"
   }
