@@ -1,0 +1,169 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.center {
+  padding-top: 2rem; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 3.75rem;
+  line-height: 1; 
+  color: #ffffff;
+  display: flex;
+}
+
+.app {
+  background: #171717;
+  height: 100vh;
+  width: 100%;
+}
+
+
+html,
+body {
+  background: #171717;
+}
+
+.dropdown {
+  position: absolute;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 0 8px 1pxrgb(44, 42, 42);
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+  padding: 5px 10px;
+}
+
+.editor {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  width: fit-content;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #171717;
+  margin: auto;
+}
+
+.main-content {
+  margin: auto;
+  box-sizing: border-box;
+  max-height: 80vh;
+  overflow: auto;
+  position: relative;
+}
+.pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 200ms;
+}
+
+.color-display {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: rgb(214 214 214) 0px 0px 6px 1px;
+}
+
+.secondary.controls {
+  right: 10px;
+  left: unset;
+}
+
+.controls {
+  position: fixed;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background: white;
+  box-shadow: 1px 1px 4px rgb(36, 3, 3);
+  border-radius: 5px;
+  padding: 3px 0;
+}
+
+input[type='color'] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  border: 0;
+}
+
+button.control-item {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  width: 41px;
+  cursor: pointer;
+  margin: 2px 5px;
+}
+
+button.control-item:disabled {
+  opacity: 0.4;
+}
+
+button.control-item:hover {
+  background: whitesmoke;
+}
+
+button.control-item.active {
+  background:#292929;
+}
+
+.controls .menu {
+  position: relative;
+}
+
+.image-input.dropdown {
+  left: 60px;
+  top: 0;
+  padding: 5px 10px 10px 10px;
+}
+.image-input.dropdown h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+}
+.image-input.dropdown .field {
+  display: flex;
+}
+.field button {
+  background: #2196f3;
+  color: white;
+  border: navajowhite;
+  padding: 6px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: 100ms transform;
+}
+.field button:active {
+  transform: translateY(1px);
+}
+.field input {
+  border: 1px solid #cbcbcb;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+.image-input.dropdown input {
+  margin-right: 5px;
+}
