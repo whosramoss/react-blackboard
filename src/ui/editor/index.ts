@@ -1,7 +1,7 @@
-import EditorCanvas from "./editor-canvas";
-import EditorRoot from "./editor-root";
+import EditorCanvas from './editor-canvas';
+import EditorRoot from './editor-root';
 
 export const Editor = {
-    Root: EditorRoot,
-    Canvas: EditorCanvas,
-}
+  Root: EditorRoot,
+  Canvas: EditorCanvas,
+};

@@ -1,12 +1,8 @@
-
-import { ICanvasControls } from "~/models/canvas-models";
+import { ICanvasControls } from '~/models/canvas-models';
 import { ChangeEventHandler, FormEventHandler, useRef, useState } from 'react';
 import { fabric } from 'fabric';
 
-export const useLeftCanvasControls = ({
-    canvas,
-    editorState
-}:ICanvasControls) =>{
+export const useLeftCanvasControls = ({ canvas, editorState }: ICanvasControls) => {
   const [editorData, setEditorState] = useState(editorState);
   const [openModal, setOpenModal] = useState<'imgDialog' | ''>('');
 
@@ -88,7 +84,7 @@ export const useLeftCanvasControls = ({
         case 'image':
           shapeObj = await new Promise((res) => {
             fabric.Image.fromURL(imgURL, function (image) {
-              image.set({ left: 30,top: 30}).scale(0.2);
+              image.set({ left: 30, top: 30 }).scale(0.2);
               res(image);
             });
           });
@@ -115,7 +111,7 @@ export const useLeftCanvasControls = ({
       canvas.clear();
       canvas.backgroundColor = '#292929';
     }
-  }
+  };
 
   return {
     openModal,
@@ -128,5 +124,5 @@ export const useLeftCanvasControls = ({
     handleImgClick,
     handleSubmit,
     handleClear,
-  }
-}
+  };
+};

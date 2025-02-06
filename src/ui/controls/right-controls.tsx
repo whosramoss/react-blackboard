@@ -6,12 +6,8 @@ import { ICanvasControls } from '~/models/canvas-models';
 import { useRightCanvasControls } from '~/hooks/useRightCanvasControls';
 
 export default function RightControls({ canvas }: ICanvasControls) {
-const {
-  enableDelete,
-  handleDownloadClick,
-  handleDeleteIcon,
-  handleUndoRedoClick
-} = useRightCanvasControls({ canvas })
+  const { enableDelete, handleDownloadClick, handleDeleteIcon, handleUndoRedoClick } =
+    useRightCanvasControls({ canvas });
 
   return (
     <div className='secondary controls'>
@@ -30,4 +26,3 @@ const {
     </div>
   );
 }
-

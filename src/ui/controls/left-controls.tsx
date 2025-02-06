@@ -5,22 +5,22 @@ import SqaureIcon from '../icons/square';
 import CircleIcon from '../icons/circle-icon';
 import TextIcon from '../icons/text';
 import ImgIcon from '../icons/image';
-import {  ICanvasControls } from '~/models/canvas-models';
+import { ICanvasControls } from '~/models/canvas-models';
 import { useLeftCanvasControls } from '~/hooks/useLeftCanvasControls';
 
 export default function LeftControls({ canvas, editorState }: ICanvasControls) {
   const {
     openModal,
     editorData,
-        colorRef,
+    colorRef,
     handleControlClick,
     handleColorChange,
     handleToggleDrawingMode,
     handleShapeClick,
     handleImgClick,
     handleSubmit,
-    handleClear
-  } = useLeftCanvasControls({ canvas, editorState })
+    handleClear,
+  } = useLeftCanvasControls({ canvas, editorState });
 
   return (
     <div className='controls'>
@@ -73,4 +73,3 @@ export default function LeftControls({ canvas, editorState }: ICanvasControls) {
     </div>
   );
 }
-

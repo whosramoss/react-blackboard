@@ -3,8 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import { ICanvasEditor, initCanvasEditor } from '~/models/canvas-models';
 import timeline from '~/utils/utils-timeline';
 
-export const useEditorCanvas = () =>{
-    const [canvas, setCanvas] = useState<fabric.Canvas>();
+export const useEditorCanvas = () => {
+  const [canvas, setCanvas] = useState<fabric.Canvas>();
   const editorState = useRef<ICanvasEditor>(initCanvasEditor);
 
   useEffect(() => {
@@ -83,8 +83,8 @@ export const useEditorCanvas = () =>{
     setCanvas(canvas);
   }, []);
 
-  return {canvas, editorState:editorState.current}
-}
+  return { canvas, editorState: editorState.current };
+};
 
 function createCanvas(editorStateRef: any): fabric.Canvas {
   fabric.Object.prototype.transparentCorners = false;
@@ -110,8 +110,8 @@ function createCanvas(editorStateRef: any): fabric.Canvas {
     const { innerWidth } = window;
     const width = innerWidth - 180;
     const height = width * (2 / 3);
-    
-    console.log('resizeCanvas',{ width, height, diff: width - height });
+
+    console.log('resizeCanvas', { width, height, diff: width - height });
 
     const diff = 500;
     const currentDiff = width - height;

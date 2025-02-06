@@ -15,7 +15,7 @@ class UtilsTimeline {
   }
 
   public undo() {
-    console.log('undo',this);
+    console.log('undo', this);
     if (this.currentIndex > 0) {
       this.currentIndex--;
       return this.actions[this.currentIndex];
@@ -23,7 +23,7 @@ class UtilsTimeline {
   }
 
   public redo() {
-    console.log('redo',this);
+    console.log('redo', this);
     if (this.currentIndex < this.actions.length - 1) {
       this.currentIndex++;
       return this.actions[this.currentIndex];

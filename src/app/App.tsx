@@ -5,25 +5,20 @@ import { Editor } from '../ui/editor';
 import Center from './_components/center';
 
 export default function App() {
-  const values = useEditorCanvas()
-  
+  const values = useEditorCanvas();
+
   return (
     <div className='app'>
-      <Center>
-        BlackBoard
-      </Center>
+      <Center>BlackBoard</Center>
       <Editor.Root>
-        {
-          values.canvas && (
-            <React.Fragment>
-              <Controls.Left {...values}/>
-              <Controls.Right {...values}/>
-            </React.Fragment>
-          )
-        }
-        <Editor.Canvas/>
+        {values.canvas && (
+          <React.Fragment>
+            <Controls.Left {...values} />
+            <Controls.Right {...values} />
+          </React.Fragment>
+        )}
+        <Editor.Canvas />
       </Editor.Root>
     </div>
   );
 }
-
